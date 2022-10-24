@@ -1,0 +1,102 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog> 
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+                <h3>Hakkımızda</h3>
+                <p>
+                    İnternet üzerinde bireysel olarak oluşturulan, genel veya belli bir odak noktası olan blog çeşididir.
+                    Büyük oranda blog yazarının ismini veya takma adını alırlar.
+                    Yazarın bireysel günlüğü olmak dışında gündemi kendi kalemi ile yansıttığı ortamdır...
+                </p>
+                <div class="read">
+                    <a href="/About/Index" class="btn btn-primary read-m">Devamını Oku</a>
+                </div>
+            </div>
+            <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
+
+                <div class="tech-btm">
+                    <h3>Son Gönderiler</h3>
+                    @foreach (var item in Model)
+                    {
+
+                   
+                    <div class="blog-grids row mb-3">
+                        <div class="col-md-5 blog-grid-left">
+                            <a href="/Blog/BlogReadAll/@item.blogID">
+                                <img src="~/AddBlogImage/@item.blogThumbnailImage" class="card-img-top img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="col-md-7 blog-grid-right">
+
+                            <h5>
+                                <a href="/Blog/BlogReadAll/@item.blogID">@item.blogTitle </a>
+                            </h5>
+                            <div class="sub-meta">
+                                <span>
+                                    <i class="far fa-clock"></i> @item.blogCreateDate.ToShortDateString()
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                    }
+
+                </div>
+            </div>
+            <!-- subscribe -->
+            <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
+                <h4 class="mb-3" style="color:white">Mail Bültenine Abone Olun</h4>
+                @await Html.PartialAsync("~/Views/NewsLatter/subscribeMail.cshtml")
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="footer-cpy text-center">
+            <div class="footer-social">
+                <div class="copyrighttop">
+                    <ul>
+                        <li class="mx-3">
+                            <a class="facebook" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="#">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                        </li>
+                        <li class="mx-3">
+                            <a class="facebook" href="#">
+                                <i class="fab fa-google-plus-g"></i>
+                                <span>Google+</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="#">
+                                <i class="fab fa-pinterest-p"></i>
+                                <span>Pinterest</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="w3layouts-agile-copyrightbottom">
+                <p>
+                    © @DateTime.Now.Year Asp.Net .Core 5.0 Tüm Hakları Saklıdır | Design by
+                    <a href="#">####</a>
+                </p>
+
+            </div>
+        </div>
+
+        <!-- //footer -->
+
+
+    </div>
+</footer>

@@ -1,0 +1,104 @@
+﻿@using Core_BlogPR.Models
+@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewData["Title"] = "BlogDetails";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+<body>
+
+    <section class="banner-bottom">
+        <!--/blog-->
+        <div class="container">
+            <div class="row">
+                <!--left-->
+                <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="blog-grid-top">
+                            <div class="b-grid-top">
+                                <div class="blog_info_left_grid">
+                                    <a href="single.html">
+                                        <img src="~/AddBlogImage/@ViewBag.writerImage" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-info-middle">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="far fa-calendar-alt"></i> @(((DateTime)item.blogCreateDate).ToString("dd-MMM-yy"))
+                                            </a>
+                                        </li>
+                                        <li class="mx-2">
+                                            <a href="#">
+                                                <i class="far fa-thumbs-up"></i> 0 Likes
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="far fa-comment"></i>  @ViewBag.commentCount
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>
+                                <a href="/Blog/BlogReadAll">@item.blogTitle </a>
+                            </h3>
+                            <p>
+                                @item.blogContent
+                            </p>
+                            <a href="/Blog/Index" class="btn btn-primary read-m">Bloga dön</a>
+                        </div>
+                    }  @ViewBag.i1
+                    @await Component.InvokeAsync("CommentListByBlog", new { id = ViewBag.i })
+                    @*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
+                    @await Component.InvokeAsync("AddComment", new { id = ViewBag.i })
+                   
+                </div>
+
+
+                <!--//left-->
+                <!--right-->
+                <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+                    <div class="right-blog-info text-left">
+                        <div class="tech-btm">
+                            <img src="~/blogTema/images/banner1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <h4>Mail Bültenine Abone Olun</h4>
+                        @await Html.PartialAsync("~/Views/NewsLatter/subscribeMail.cshtml")
+                        <div class="tech-btm">
+
+                            <h4>Kategoriler</h4>
+                            @await Component.InvokeAsync("CatagoryLeftList")
+                        </div>
+
+                        @await Component.InvokeAsync("WriterLastBlog", new { id = ViewBag.writerid })
+
+                        
+                            @await Component.InvokeAsync("BlogReadyAll_Last4Post")
+
+
+                        
+                    </div>
+                </aside>
+                <!--//right-->
+            </div>
+        </div>
+    </section>
+    <!--//main-->
+
+
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>

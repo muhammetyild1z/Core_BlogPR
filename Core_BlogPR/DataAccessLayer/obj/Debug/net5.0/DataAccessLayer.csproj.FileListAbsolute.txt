@@ -1,0 +1,36 @@
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.json
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.dev.json
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Muhammet\Desktop\Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.json
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.dev.json
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Muhammet\Desktop\Proje Ve Doyalar\projeler\.CORE\Core_BlogPR\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache

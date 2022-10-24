@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Comment>
+
+
+
+    <div class="comment-top">
+        <h4>Yorumlar</h4><br />
+        @foreach (var item in Model)
+        {
+
+            <p><strong> @ViewBag.i1</strong></p>
+
+            <div class="media">
+                <img src="~/AddProfileImage/" alt="" class="img-fluid" />
+                <div class="media-body">
+                    <h5 class="mt-0">@item.commentUserName</h5>
+                    <h6 style="font-size:12px" class="mt-0">  @item.commentTitle</h6>
+                    <p>
+                        @item.commentContect
+                    </p>
+                   
+                    <br />
+                    <br />
+                    @*<div class="media mt-3">
+            <a class="d-flex pr-3" href="#">
+                <img src="images/t2.jpg" alt="" class="img-fluid" />
+            </a>
+            <div class="media-body">
+                <h5 class="mt-0">Richard Spark</h5>
+                <p>
+                    Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros.
+                    Cras a ornare elit.
+                </p>
+            </div>
+        </div>*@
+                </div>
+            </div>
+        }
+        </div>
+    

@@ -1,0 +1,18 @@
+﻿@model EntityLayer.Concrete.Catagory
+@{
+    ViewData["Title"] = "CatagoryEdit";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<form method="post" action="/Admin/Catagory/CatagoryEdit/" >
+    <div class="form-group">
+        <label>Katagori Adı</label>
+        @Html.TextBoxFor(x => x.catagoryName, new { @class = "form-control" })
+        <br />
+        <label>Katagori Açıklaması</label>
+        @Html.TextBoxFor(x => x.catagoryDesc, new { @class = "form-control" })
+        @Html.HiddenFor(x=>x.catagoryID)
+        <br />
+        <input type="submit" name="btn" value="Kaydet" class="btn btn-adn btn-info"  />
+    </div>
+</form>

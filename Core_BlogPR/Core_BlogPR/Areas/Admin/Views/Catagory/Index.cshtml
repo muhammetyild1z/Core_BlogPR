@@ -1,0 +1,62 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model IPagedList<EntityLayer.Concrete.Catagory>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Katagori Listesi</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Admin</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a>Katagori</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Katagori Listesi</strong>
+            </li>
+        </ol>
+    </div>
+    
+</div>
+<br />
+<br />
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Katagori Adı</th>
+            <th>Katagori Ayrıntısı</th>
+            <th>Katagori Durumu</th>
+            <th>Pasif Yap</th>
+            <th>Aktif Yap</th>
+            <th>Düzenle</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.catagoryID</td>
+                <td>@item.catagoryName</td>
+                <td>@item.catagoryDesc</td>
+                <td>@item.catagoryStatus</td>
+                <td><a href="/Admin/Catagory/Pasif/@item.catagoryID" class="btn btn-warning" 
+                       onclick="return confirm('Katagoriyi pasif yapmak istediğinize emin misiniz?')">Pasif Yap</a></td>
+                <td><a href="/Admin/Catagory/Aktif/@item.catagoryID" class="btn btn-success"
+                        onclick="return confirm('Katagoriyi Aktif yapmak istediğinize emin misiniz?')">Aktif Yap</a></td>
+                <td><a href="/Admin/Catagory/CatagoryEdit/@item.catagoryID" class="btn btn-info">Düzenle</a></td>
+            </tr>
+        </tbody>
+    }
+</table>
+
+<br />
+<br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
+
+<a href="/Admin/Catagory/CatagoryAdd"><input type="button" class="btn btn-info ml-3 col-md-2" value="Yeni Katagori Ekle" /></a>

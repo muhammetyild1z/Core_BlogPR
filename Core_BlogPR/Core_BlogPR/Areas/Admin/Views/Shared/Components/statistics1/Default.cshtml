@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
+
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="widget navy-bg no-padding">
+            <div class="p-m">
+                <h1 class="m-xs">$ 1,540</h1>
+
+                <h3 class="font-bold no-margins">
+                    Annual income
+                </h3>
+                <small>Income form project Alpha.</small>
+            </div>
+            <div class="flot-chart">
+                <div class="flot-chart-content" id="flot-chart1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+
+
+        <div class="widget lazur-bg no-padding">
+
+            @foreach (var item in Model)
+            {<div class="p-m">
+                    <h3 class="font-bold no-margins">
+                        @item.blogTitle
+                    </h3>
+
+                    <small>@item.Writer.writerName</small>
+                </div>
+            }
+
+
+            <div class="flot-chart">
+                <div class="flot-chart-content" id="flot-chart2"></div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>

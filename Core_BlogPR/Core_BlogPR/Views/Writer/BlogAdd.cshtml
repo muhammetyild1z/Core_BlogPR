@@ -1,0 +1,63 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewData["Title"] = "BlogAdd";
+    Layout = "~/Views/Shared/Writer_Layout.cshtml";
+}
+
+
+
+<h1 class="mt-3">Yeni Blog Ekle</h1>
+<br />
+
+<form method="post" asp-controller="Writer" asp-action="BlogAdd" enctype="multipart/form-data">
+
+    @Html.Label("Blog Başlığı")
+
+    @Html.TextBoxFor(x => x.blogTitle, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" })
+
+    @Html.ValidationMessageFor(x => x.blogTitle, "", new { @class = "text-danger " })
+    <br />
+    <br />
+
+
+
+
+
+    <label>Blogun küçük görseli</label>
+    <br />
+    <input type="file" name="blogSmallImage" class="file-upload-default">
+    @Html.ValidationMessageFor(x => x.blogSmallImage, "", new { @class = "text-danger" })
+
+    <br />
+    <br />
+
+
+
+    <label>Blogun büyük görseli</label>
+    <br />
+    <input type="file" name="blogThumbnailImage" class="file-upload-default">
+
+    @Html.ValidationMessageFor(x => x.blogThumbnailImage, "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+    @Html.Label("Blogun katagorisi")
+
+
+    @*@Html.DropDownList("cv");*@
+    @Html.DropDownListFor(x => x.catagoryID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" })
+
+    <br />
+    <br />
+
+    @Html.Label("Blog İçeriği")
+
+    @Html.TextAreaFor(x => x.blogContent, 10, 3, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" });
+
+    @Html.ValidationMessageFor(x => x.blogContent, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    <button class="btn btn-info">Blogu Yayınla</button>
+</form>
+
+

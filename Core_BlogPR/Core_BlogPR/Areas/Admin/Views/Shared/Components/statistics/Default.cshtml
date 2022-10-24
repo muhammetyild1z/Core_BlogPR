@@ -1,0 +1,55 @@
+﻿@model List<EntityLayer.Concrete.Blog>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="widget style1">
+            <div class="row">
+                <div class="col-4 text-center">
+                    <i class="fa fa-plus fa-5x"></i>
+                </div>
+                <div class="col-8 text-right">
+                    <span> Toplam Blog Sayısı </span>
+                    <h2 class="font-bold">@Model.Count()</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="widget style1 navy-bg">
+            <div class="row">
+                <div class="col-4">
+                    <i class="fa fa-cloud fa-5x"></i>
+                </div>
+                <div class="col-8 text-right">
+                    <span>  @ViewBag.city </span>
+                    <h2 class="font-bold"> @ViewBag.weader'C</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="widget style1 lazur-bg">
+            <div class="row">
+                <div class="col-4">
+                    <i class="fa fa-bell-o fa-5x"></i>
+                </div>
+                <div class="col-8 text-right">
+                    <span> Bildirimler </span>
+                    <h2 class="font-bold">@ViewBag.notification</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="widget style1 yellow-bg">
+            <div class="row">
+                <div class="col-4">
+                    <i class="fa fa-comment fa-5x"></i>
+                </div>
+                <div class="col-8 text-right">
+                    <span>Toplam Yorum Sayısı </span>
+                    <h2 class="font-bold">@ViewBag.commentCount</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

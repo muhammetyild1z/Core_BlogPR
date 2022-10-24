@@ -1,0 +1,30 @@
+﻿@model List<EntityLayer.Concrete.Blog>
+
+@{
+    ViewData["Title"] = "Default";
+    Layout = null;
+}
+
+@foreach (var item in Model)
+{
+
+
+<tr>
+    <td>
+        @item.Writer.writerName
+    </td>
+    <td> @item.blogTitle </td>
+   
+        <td>
+            <label class="badge badge-gradient-success">@item.Catagory.catagoryName</label>
+        </td>
+    
+  
+
+    <td> @(((DateTime)item.blogCreateDate).ToString("dd-MMM-yy")) </td>
+    
+    <td>
+        <a href="/Blog/BlogReadAll/@item.blogID">Detaylar</a>
+    </td>
+</tr>
+}

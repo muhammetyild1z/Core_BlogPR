@@ -1,0 +1,59 @@
+﻿@model EntityLayer.Concrete.Blog
+
+@{
+    ViewData["Title"] = "BlogEdit";
+    Layout = "~/Views/Shared/Writer_Layout.cshtml";
+}
+
+<h1>Blog Düzenle</h1>
+
+@using (Html.BeginForm("BlogEdit", "Writer", FormMethod.Post))
+{
+
+
+    @Html.HiddenFor(x => x.blogID, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" });
+
+
+
+    @Html.Label("Blog Başlığı")
+
+    @Html.TextBoxFor(x => x.blogTitle, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" });
+
+    @Html.ValidationMessageFor(x => x.blogTitle, "", new { @class = "text-danger " })
+    <br />
+    <br />
+
+    @Html.Label("Blogun küçük görseli")
+
+    @Html.TextBoxFor(x => x.blogSmallImage, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" });
+
+    @Html.ValidationMessageFor(x => x.blogSmallImage, "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+    @Html.Label("Blogun büyük görseli")
+
+    @Html.TextBoxFor(x => x.blogThumbnailImage, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" });
+
+    @Html.ValidationMessageFor(x => x.blogThumbnailImage, "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+    @Html.Label("Blogun katagorisi")
+
+    @Html.DropDownListFor(x => x.catagoryID, (IList<SelectListItem>)ViewBag.cv, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" })
+
+    @Html.ValidationMessageFor(x => x.catagoryID, "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+    @Html.Label("Blog İçeriği")
+
+    @Html.TextAreaFor(x => x.blogContent, 10, 3, new { @class = "form-control ", @style = "color:black;  background-color:#fff; border-radius:5px; border-color:black" });
+
+    @Html.ValidationMessageFor(x => x.blogContent, "", new { @class = "text-danger" })
+    <br />
+    <br />
+    <button class="btn btn-info">Düzenlemeyi Kaydet</button>
+}
+

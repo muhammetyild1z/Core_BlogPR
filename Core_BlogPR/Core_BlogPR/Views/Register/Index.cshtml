@@ -1,0 +1,88 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/User_Layout.cshtml";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="  />
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yazar Kayıt Sayfası</h3>
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+
+                <form method="post" enctype="multipart/form-data" asp-controller="Register" asp-action="Index">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Adınız Soyadınız</label>
+                            @Html.TextBoxFor(x=> x.writerName ,new{ @class="form-control" })
+                            @Html.ValidationMessageFor(x=> x.writerName,"" ,new { @class = "text-danger" })
+                            @*<input type="text" class="form-control" id="validationDefault01" placeholder="" name="writerName" required="">*@
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Mail Adresi</label>
+                            @Html.TextBoxFor(x => x.mail, new { @class = "form-control" , @type = "email" })
+                            @Html.ValidationMessageFor(x => x.mail, "", new { @class = "text-danger" })
+                            @*<input type="text" class="form-control" id="validationDefault02" placeholder="" name="writerMail" required="">*@
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Şifre</label>
+                            @Html.PasswordFor(x => x.password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.password, "", new { @class = "text-danger" })
+                            @*<input type="password" class="form-control" id="password1" placeholder="" name="writerPassword" required="">*@
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Şifreyi tekrar girin</label>
+                
+                            <input type="password" class="form-control" id="password2" placeholder="" name="PasswordRepeat" >
+
+                        </div>
+                        <div class="form-group col-md-6">
+                           
+                            
+                                <label>Profil resmi</label><br />
+                                <input type="file" name="writerImage"class="file-upload-default" >
+                               
+                            @*@Html.ValidationMessageFor(x => x.writerImage, "", new { @class = "text-danger" })*@
+                            @*<input type="text" class="form-control" id="" placeholder="" name="writerImage" required="">*@
+                        </div>
+
+                    </div>
+                    <p>
+                        <input type="checkbox" name="checkbox" />
+                        <a href="#" id="btn_1">Tüm şartları okudum,kabul ediyorum.</a>
+                    </p>
+                    <br />
+                    <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
+
+                </form>
+
+            </div>
+        </div>
+        @if (ViewBag.registerhata1 == 1)
+        {
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>@ViewBag.registerhata
+        }
+        @ViewBag.registersifre 
+    @ViewBag.registermail
+        @ViewBag.Image
+
+    </div>
+    <br />
+   
+       
+
+  
+    <script>
+        $('#btn_1').click(function () {
+            swal("Site Kabul Şartları","Sitemizde verdiğiniz mail adresi üzerinden bilgi ve haber e-postaları spam ölçüsüne varmadan gönderilmeye devam edilecektir eğer e-posta bülteninden çıkmak isterseniz mail ileti dizisini durdurabilirsiniz.");
+            
+        });
+                      
+    </script>
+</section>
+    

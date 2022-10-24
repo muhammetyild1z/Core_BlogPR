@@ -1,0 +1,79 @@
+﻿@model List<EntityLayer.Concrete.Writer>
+@{
+    ViewData["Title"] = "Writer";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Yazar Listesi</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="#">Admin</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a>Yazar</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Yazar Listesi</strong>
+            </li>
+        </ol>
+    </div>
+
+</div>
+<br />
+<br />
+
+
+<form method="get">
+    <div class="form-outline mb-4 col-md-12 row">
+        @*<label class="form-label" for="datatable-search-input"></label>*@
+
+        <input type="search" class="form-control col-md-11 " name="searchBlog" placeholder="Yazar ara">
+
+
+        <button type="submit" class="btn btn-primary col-md-1">
+
+            <i class="fa fa-search"></i>
+
+        </button>
+    </div>
+</form>
+<div id="datatable">
+</div>
+@foreach (var item in Model)
+{
+
+    <div class="col-lg-4" style="float:left">
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <img src="~/AddProfileImage/@item.writerImage" alt="avatar"
+                     class="rounded-circle img-fluid" style="width: 150px;">
+                <h5 class="my-3">@item.writerName</h5>
+                @if (item.writerAbout.Length <= 50)
+                {
+                    <p class="text-muted mb-1">
+                        @item.writerAbout   <br />
+                    </p>
+                }
+                else
+                {
+                    <p class="text-muted mb-1">
+                        @item.writerAbout.Substring(0, 50)<br />
+                    </p>
+                    <p>  @item.writerAbout.Substring(50, 100)...</p>
+
+                }
+
+                <br />
+                <br />
+                <div class="d-flex justify-content-center mb-2">
+                    <button type="submit" class="btn btn-primary" href="/Admin/Blog/WriterDetails/@item.writerID">Detaylı görünüm</button>
+                    @*<button type="button" class="btn btn-outline-primary ms-1"></button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

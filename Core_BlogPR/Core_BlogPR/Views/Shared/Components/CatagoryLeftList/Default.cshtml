@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Catagory>
+
+@using EntityLayer.Concrete
+
+<ul class="list-group single">
+    @foreach (var item in Model)
+    {
+
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          @item.catagoryName
+           <span class="badge badge-primary badge-pill">
+             
+            </span>
+        </li>
+    }
+</ul>
+

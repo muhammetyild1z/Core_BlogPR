@@ -1,0 +1,62 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewData["Title"] = "WriterProfileEdit";
+    Layout = "~/Views/Shared/Writer_Layout.cshtml";
+}
+
+
+<form method="post" enctype="multipart/form-data" asp-controller="Writer" asp-action="WriterProfileEdit">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+
+                <p class="card-description"> Yazar profil bilgileri güncelle </p>
+                
+                    <div class="form-group">
+                        <label>    Ad Soyad</label>
+                        @Html.TextBoxFor(x => x.writerName, new { @class = "form-control" })
+                        @*@Html.ValidationMessageFor(x => x.writerName, "", new { @class = "text-danger " })*@
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        @Html.TextBoxFor(x => x.mail, new { @class = "form-control" })   @*kontrol koy mail için*@
+                        @*@Html.ValidationMessageFor(x => x.writerMail, "", new { @class = "text-danger " })*@
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleSelectGender">Aktiflik durumu</label>
+                        <select class="form-control" id="exampleSelectGender">
+                            @*statüs*@
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleTextarea1">Yazar hakkında</label>
+                        @Html.TextAreaFor(x => x.writerAbout, 10, 3, new { @class = "form-control" })
+                        @*@Html.ValidationMessageFor(x => x.writerAbout, "", new { @class = "text-danger " })*@
+                    </div>
+                    <div class="form-group">
+                        <label>Profil resmi</label>
+                       
+                        <div class="input-group col-xs-12">
+                            
+                            <input type="file" name="writerImage" class="form-control file-upload-info"  placeholder="Upload Image">
+                            
+                        </div>
+                    </div>
+                    <br />
+
+                    @Html.HiddenFor(x => x.writerID)
+                    @Html.HiddenFor(x => x.password)
+                    @Html.HiddenFor(x => x.writerStatus)
+                    <a href="/Writer/WriterProfileEdit">  <button type="submit" class="btn btn-gradient-primary mr-2">Güncelleştir</button></a>
+                    @*<button class="btn btn-light">Cancel</button>*@
+                
+            </div>
+        </div>
+    </div>
+</form>
+
+
+    
